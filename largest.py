@@ -1,36 +1,14 @@
-numberList = []
+highestnum = 0
 for x in range(4):
-	number = int(input("Number please..."))
-	numberList.append(number)
+	userinput = input("Number please... ")
+	usernum = int(userinput, 10)
+	if usernum > highestnum:
+		highestnum = usernum
+		print("Updating highestnum... ")
+	else: 
+		print("This is not the highest number")
 	
-if numberList[0] <= numberList[1]:
-	x = numberList[1]
-	if numberList[1] <= numberList[2]:
-		x = numberList[2]
-		if numberList[2] <= numberList[3]:
-			x = numberList[3]
-		elif numberList[2] >= numberList[3]:
-			x = numberList[2]
-	elif numberList[1] >= numberList[2]:
-		x = numberList[1]
-		if numberList[1] <= numberList[3]:
-			x = numberList[3]
-		elif numberList[1] >= numberList[3]:
-			x = numberList[1]
-elif numberList[0] >= numberList[1]:
-	x = numberList[0]
-	if numberList[0] <= numberList[2]:
-		x = numberList[2]
-		if numberList[2] <= numberList[3]:
-			x = numberList[3]
-		elif numberList[2] >= numberList[3]:
-			x = numberList[2]
-	elif numberList[0] >= numberList[2]:
-		x = numberList[0]
-		if numberList[0] <= numberList[3]:
-			x = numberList[3]
-		elif numberList[0] >= numberList[3]:
-			x = numberList[0]
+	
 			
-print("The largest number is ", x)
+print("The largest number is ", highestnum)
     
